@@ -1,0 +1,137 @@
+@charset("utf-8");
+* {
+    padding: 0px;
+    margin:0px;
+    box-sizing: border-box;
+}
+body {
+	font-family: "微软雅黑";
+	font-size: 1.5em;
+}
+
+.pull-left {
+	font-size: 1em;
+}
+.boldf{
+	font-weight:bold;
+}/*搜索框样式*/
+.search{
+	height:4rem;
+	line-height: 4rem;
+	vertical-align:top;
+	width:100%;
+	margin:0 auto;
+	text-align: center;
+	position:relative;
+}
+
+.findword{
+	height: 100%;
+	width:30%;
+	max-width: 500px;
+	padding:5px;
+	border:2px #337ab7 solid;
+}
+.sbutton{
+	height: 100%;
+	padding:0px 2rem;
+	outline: none;
+	border:none;
+	color:#fff;
+	background-color: #337ab7;
+}
+@media(max-width: 450px){
+.findword{
+	width:70%;
+}
+.sbutton{
+	width:20%;
+	padding: 0;
+}
+/*搜索框样式结束*/
+}
+
+/*文档类型*/
+.findstage{
+	list-style: none;
+	height: 30px;
+	max-width:400px;
+	margin:20px auto;
+	text-align: center;
+}
+.findstage li{
+	width:33.333%;
+	text-align: center;
+	float:left;
+	padding:0 0.2em;
+}
+
+/*结果过滤*/
+.filter{
+	display: none;
+}
+.filter h4{
+	display:inline-block;
+	text-align:right;
+}
+.filter ul{
+	list-style: none;margin:0px auto;
+}
+.filter ul li{
+	float:left;
+	padding:0px 8px;
+}
+.keyword{
+	/* height: 150px; */
+	line-height: 40px;
+	padding:0px 6%;
+	margin-bottom:20px;
+}
+.keyword h4{
+	float: left;
+}
+/*结果过滤结束*/
+
+/*查询结果*/
+.newscontent{
+	max-height: 40px;
+	overflow: hidden;
+	position: relative;
+	padding:0px 4px;
+}
+.newscontent:after{
+	content:'...';
+	right:-2px;
+	bottom:0px;
+	position: absolute;
+	padding:0px 1px;
+	background-color: #fff;
+	z-index:6;
+}
+.control-label{padding:0;padding-left:1.5rem;}
+@keyframes myanimation{
+	from{opacity:0;transform:rotateX(90deg)}
+	to{opacity:1;transform:rotateX(0deg);}
+}
+@-webkit-keyframes myanimation{
+	from{opacity:0;transform:rotateX(90deg)}
+	to{opacity:1;transform:rotateX(0deg);}
+}
+@-mox-keyframes myanimation{
+	from{opacity:0;transform:rotateX(90deg)}
+	to{opacity:1;transform:rotateX(0deg);}
+}
+@-o-keyframes myanimation{
+	from{opacity:0;transform:rotateX(90deg)}
+	to{opacity:1;transform:rotateX(0deg);}
+}
+.panel-body{position:relative;}
+.panel-body:hover .detail_stage{display:block; animation:myanimation 0.5s; -webkit-animation: myanimation 0.5s;}
+.detail_stage{width:8rem;
+	position:absolute;right:-8rem;top:0px;
+	z-index:3;list-style:none;display:none;
+}
+.detail_stage li{height:52px;background-color:#428bca;color:#fff;text-align:center;line-height:52px;border-bottom:1px solid #fff;
+}
+.col-sm-6,.col-sm-7,.col-sm-5{padding:0;}
+.keyword .col-sm-10{padding:0;}
